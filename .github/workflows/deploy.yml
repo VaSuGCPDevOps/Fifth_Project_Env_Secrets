@@ -2,14 +2,14 @@ name: Deployment
 on:
   push:
     branches:
-      - main
+      - master
       - dev
 env:
   MONGODB_DB_NAME: vasudatabase
 
 jobs:
   test:
-    environment: testing
+    environment: testingg
     runs-on: ubuntu-latest
     
     env:
@@ -17,7 +17,7 @@ jobs:
       MONGODB_PASSWORD: vasu@007V
       MONGODB_CLUSTER_ADDRESS: cluster0.3z52ix6.mongodb.net
       PORT: 8080
-      
+
     steps:
       - name: Get Code
         uses: actions/checkout@v3
